@@ -6,17 +6,24 @@
     apt:
       name: apache2 
       state: present
+    when: ansible_os_family == "Debian"
+
   - name: Start Apache server
     service:
        name: apache2
        state: started
+    when: ansible_os_family == "Debian"
+
   - name: Install Tomcat on RedHat(httpd)
     yum:
       name: httpd
       state: present
+    when: ansible_os_family == "RedHat"
+
   - name: Start RedHat server
     service:
        name: httpd
        state: started
+    when: ansible_os_family == "RedHat"
 
     
