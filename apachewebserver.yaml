@@ -2,7 +2,7 @@
 - hosts: all
   become: yes
   tasks:
-  - name: Install Apache Webserver on Ubuntu
+  - name: Install Apache Webserver on Ubuntu(apache2)
     apt:
       name: apache2 
       state: present
@@ -10,13 +10,13 @@
     service:
        name: apache2
        state: started
-  - name: Install Tomcat on RedHat
+  - name: Install Tomcat on RedHat(httpd)
     yum:
-      name: RedHat 
+      name: httpd
       state: present
   - name: Start RedHat server
     service:
-       name: RedHat
+       name: httpd
        state: started
 
     
