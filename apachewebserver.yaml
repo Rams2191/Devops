@@ -1,0 +1,8 @@
+---
+- hosts: all
+  tasks:
+  - name: Install Apache Webserver on Ubuntu
+    apt:
+     name=apache2 
+     state=latest
+    
