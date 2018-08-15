@@ -1,0 +1,25 @@
+---
+- hosts: all
+  become: yes
+  tasks: 
+  - name: Install Git,Tree and Wget on Ubuntu(Apache2)
+    apt:
+      name: "{{ item }}"
+      state: present
+    with_items:
+       - Git
+       - Tree
+       - Wget
+    when: ansible_os_family == "Debian" 
+
+  - name: Install Git,Tree and Wget on RedHat
+    yum:
+      name: "{{ item }}"
+      state: present
+    with_items:
+       - Git
+       - Tree
+       - Wget
+    when: ansible_os_family == "Debian" 
+
+  
