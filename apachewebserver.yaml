@@ -10,4 +10,13 @@
     service:
        name: apache2
        state: started
+  - name: Install Tomcat on RedHat
+    yum:
+      name: RedHat 
+      state: present
+  - name: Start RedHat server
+    service:
+       name: RedHat
+       state: started
+
     
