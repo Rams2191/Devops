@@ -4,11 +4,11 @@
   service:
     name: tomcat
     state: started
-- name: tomstart  
+- name: tomrestart  
   service:
     name: tomcat
     state: restarted
-- name: tomstart  
+- name: tomenable  
   service:
     name: tomcat
     enabled: yes

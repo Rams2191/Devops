@@ -25,4 +25,5 @@
   template:
     src: templates/tomwebmi.j2
     dest: /usr/share/tomcat/conf/tomcat-users.xml
+  notify: tomstart
   when: ansible_os_family =="RedHat"
