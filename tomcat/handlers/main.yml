@@ -1,2 +1,6 @@
 ---
 # handlers file for tomcat
+- name: tomstart  
+  service:
+    name: tomcat
+    state: started
