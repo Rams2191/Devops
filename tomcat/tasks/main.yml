@@ -6,13 +6,13 @@
     state: present
   when: ansible_os_family =="RedHat"
 
-  - name: copy the tomcat config file on all nodes
+- name: copy the tomcat config file on all nodes
   template:
     src: templates/tomconfig.j2
     dest: /usr/share/tomcat/conf/tomcat.conf
   when: ansible_os_family =="RedHat"
 
-  - name: Install Admin Packages on all nodes
+- name: Install Admin Packages on all nodes
   yum:
     name: "{{ item }}"
     state: present
@@ -21,7 +21,7 @@
     - tomcat-javadoc
   when: ansible_os_family =="RedHat
 
-  - name: Configure Tomcat Web Management Interface on all nodes
+- name: Configure Tomcat Web Management Interface on all nodes
   template:
     src: templates/tomwebmi.j2
     dest: /usr/share/tomcat/conf/tomcat-users.xml
