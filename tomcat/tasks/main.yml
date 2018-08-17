@@ -19,7 +19,7 @@
   with_items:
     - tomcat-docs-webapp
     - tomcat-javadoc
-  when: ansible_os_family =="RedHat
+  when: ansible_os_family =="RedHat"
 
 - name: Configure Tomcat Web Management Interface on all nodes
   template:
