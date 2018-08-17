@@ -1,9 +1,9 @@
 ---
 # handlers file for tomcat
 - name: tomstart  
-  systemd:
+  service:
     name: tomcat
     state: started
-    enabled: yes
+    
 
     
