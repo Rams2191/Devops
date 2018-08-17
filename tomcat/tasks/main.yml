@@ -27,3 +27,9 @@
     dest: /usr/share/tomcat/conf/tomcat-users.xml
   notify: tomstart
   when: ansible_os_family =="RedHat"
+
+- name: Start Tomcat
+  service: 
+    - name: tomcat 
+      state: started 
+      enabled: yes
