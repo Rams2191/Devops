@@ -1,8 +1,13 @@
 ---
 # handlers file for tomcat
+- name: starttomcat
+  service:
+    name: tomcat
+    state: started
+    enabled: yes
+
 - name: tomstart  
   service:
-    enabled: yes
     name: tomcat
     state: restarted
 
